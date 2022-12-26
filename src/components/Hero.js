@@ -12,7 +12,7 @@ const Hero = ()=> {
         </div>
         <button className="hover:bg-[#e4ccc0] transition w-60 h-12 bg-[#f8b984] text-sm text-black font-semibold uppercase"><a href="">reserve a table</a></button>
       </div>
-      <div className="absolute bottom-0 left-1/2 translate-x-[-50%]"><a href=""><img className="w-20 animate-bounce" src={arrow}/></a></div>
+      <div className="absolute bottom-0 left-1/2 translate-x-[-50%]"><a href="#About"><img className="w-16 animate-bounce" src={arrow}/></a></div>
     </div>
   )
 }
