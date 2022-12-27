@@ -3,6 +3,8 @@ import background from './components/assets/bg2.jpg';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Main from './components/main';
+import Dish from './components/Dish';
+import Reservation from './components/Reservation';
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
       {/* Main */}
       <Main/>
       {/* dish Section */}
+      <Dish/>
       {/* Reservation Section + contact */}
-      {/* footer */}
+      <Reservation/>
+      {/* footer [#131313] */}
     </div>
   );
 }
