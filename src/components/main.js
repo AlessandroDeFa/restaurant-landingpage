@@ -13,7 +13,7 @@ const Main = ()=> {
           <div className="pl-16 flex flex-col gap-12 h-full justify-evenly">
             <h2 className="text-[#f8b984] text-5xl font-medium">Years of Delicoius</h2>
             <p className="text-white max-w-[650px] ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus voluptatibus, impedit doloremque, id numquam delectus corrupti optio iusto laboriosam, quae odit repellendus dolor nostrum distinctio aperiam fugit deserunt possimus minus. Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            <div className="flex justify-start items-center"><Link to="/gallery" className="hover:bg-[#e4ccc0] transition duration-400 w-60 h-12 bg-[#f8b984] text-sm text-black font-semibold uppercase bg-[#f8b984] text-center w-60 h-12 flex justify-center items-center"> View Gallery <img src="" alt="" /></Link></div>
+            <div className="flex justify-start items-center"><Link to="/gallery" className="hover:bg-[#e4ccc0] transition duration-400 w-60 h-12 bg-[#f8b984] text-sm text-black font-semibold uppercase bg-[#f8b984] text-center w-60 h-12 flex justify-center items-center"> View Gallery</Link></div>
           </div>
           </div>
           </div>
