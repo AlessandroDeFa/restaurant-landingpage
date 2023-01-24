@@ -9,10 +9,10 @@ const Dish = ()=> {
 
 
   return (
-    <div className="h-screen bg-[#140e11] flex flex-col justify-evenly">
+    <div className="h-screen bg-[#140e11] flex flex-col justify-evenly overflow-x-hidden">
       <div className="text-[#d1d0d1] text-xl max-w-[95%] pt-4 border-t-[1px] border-[#f8b984]  mx-auto w-screen uppercase">Some of our Delicoius dishes</div>
       <div className="h-4/5 bg-[#131313]">
-      <div className="w-full h-full flex">
+      <div className="w-full h-full flex md:flex-col">
         <div id="dish-container" className="group relative flex-1 hover:flex-[2] hover:transition-all hover:duration-500 duration-500 py-[0.1rem] pr-[0.1rem] bg-[#f8b984]">
         <div className="absolute top-[50%] left-[50%] z-10 translate-y-[-50%] translate-x-[-50%]">
         <div className="text-white text-center pb-4 text-2xl">Breakfast</div>

@@ -6,7 +6,7 @@ import {Header, Hero, Main, Dish, Reservation, Footer} from './index';
 const Home = ()=> {
   return (
     <>
-      <div className="flex flex-col h-screen bg-cover bg-no-repeat bg-left" style={{backgroundImage: `url(${background})`}}>
+      <div className="flex flex-col h-screen bg-cover bg-no-repeat bg-left sm:bg-[15%] relative" style={{backgroundImage: `url(${background})`}}>
         {/* Header */}
         <Header/>
         {/* Hero Section */}

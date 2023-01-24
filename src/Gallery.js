@@ -13,7 +13,7 @@ const Gallery = ()=> {
         <div className="mb-16 mt-8 before:w-[75%] relative before:bg-[#f8b984] before:absolute before:h-[2px] before:left-[50%] before:bottom-[-0.5rem] before:translate-x-[-50%]">
           <h1 className="text-[#f8b984] text-5xl">GALLERY</h1>
         </div>
-        <div className="grid grid-cols-3 [&>*]:max-w-md gap-4">
+        <div className="grid grid-cols-3 [&>*]:max-w-md [&>*]:min-w-[170px] gap-4 md:grid-cols-2 md:text-sm">
           <div><img src={img} alt="" /><div className="text-[#f8b984] py-4">cibo prova</div>
           </div>
           <div><img src={img} alt="" /><div className="text-[#f8b984] py-4">cibo prova</div>
