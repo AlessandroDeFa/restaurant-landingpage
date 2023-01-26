@@ -6,6 +6,7 @@ const Contact = () => {
     e.preventDefault();
     return false;
   };
+
   return (
     <>
       <div className="bg-[#140e11]">
