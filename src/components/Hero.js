@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import arrow from "./assets/arrow.svg";
 import { Link } from "react-router-dom";
-import { IoIosArrowDown } from "react-icons/io";
+import gsap, { Power4, TweenMax } from "gsap";
 
-const Hero = () => {
+const Hero = (props) => {
+  let heroText = useRef(null);
+
+  useEffect(() => {
+    TweenMax.from(heroText, {
+      duration: 2,
+      y: 20,
+      opacity: 0,
+      stagger: 0.5,
+      ease: Power4.easeOut,
+    });
+  }, []);
+
   return (
     <div className="flex-auto flex items-center">
-      <div className="max-w-[95%] my-0 mx-auto text-white w-screen flex flex-col gap-12">
+      <div
+        ref={(el) => (heroText = el)}
+        className="max-w-[95%] my-0 mx-auto text-white w-screen flex flex-col gap-12"
+      >
         <h6>
           <span>⬧</span> SINGAPORE
         </h6>

@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import location from "./assets/location.jpg";
 import { Link } from "react-router-dom";
+import gsap, { Power4, TweenMax } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Main = () => {
+  let textMain = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    const textMain = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#About",
+        start: "center bottom",
+      },
+    });
+  }, []);
+
   return (
     <div
       id="About"

@@ -3,7 +3,8 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
 
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,7 +15,6 @@ html {
 }
 
 body {
-  font-family:'Lora', serif;
-  
-}
+  font-family: 'Lora', serif;
 
+}
