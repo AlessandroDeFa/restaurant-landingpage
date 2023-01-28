@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Header, Footer } from "./index";
+import gsap, { Power4 } from "gsap";
 
 const ReservationPage = () => {
   const onSubmit = (e) => {
@@ -7,13 +8,24 @@ const ReservationPage = () => {
     return false;
   };
 
+  let resTitle = useRef(null);
+  let resForm = useRef(null);
+
+  useEffect(() => {
+    gsap.from(resTitle, { opacity: 0, duration: 1.5 });
+    gsap.from(resForm, { opacity: 0, duration: 1 }, "-=1.2");
+  });
+
   return (
     <>
       <div className="bg-[#140e11]">
         <Header />
       </div>
       <div className="min-h-screen bg-[hsl(350,15%,10%)] flex flex-col">
-        <div className="max-w-[95%] my-0 mx-auto pt-[15vh] w-full">
+        <div
+          ref={(el) => (resTitle = el)}
+          className="max-w-[95%] my-0 mx-auto pt-[15vh] w-full"
+        >
           <div className="text-[#f8b984] text-5xl before:w-[75%] relative before:bg-[#f8b984] before:absolute before:h-[2px] before:left-[50%] before:bottom-[-0.5rem] before:translate-x-[-50%] w-fit">
             <h1>RESERVATION</h1>
           </div>
@@ -34,6 +46,7 @@ const ReservationPage = () => {
         </div>
         <div className="flex justify-center items-center flex-auto">
           <form
+            ref={(el) => (resForm = el)}
             action=""
             onSubmit={onSubmit}
             className="max-w-5xl w-full mx-4 my-16"

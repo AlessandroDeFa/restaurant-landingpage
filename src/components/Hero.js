@@ -1,19 +1,22 @@
 import React, { useEffect, useRef } from "react";
 import arrow from "./assets/arrow.svg";
 import { Link } from "react-router-dom";
-import gsap, { Power4, TweenMax } from "gsap";
+import gsap, { Power4 } from "gsap";
 
 const Hero = (props) => {
   let heroText = useRef(null);
 
   useEffect(() => {
-    TweenMax.from(heroText, {
-      duration: 2,
-      y: 20,
-      opacity: 0,
-      stagger: 0.5,
-      ease: Power4.easeOut,
-    });
+    gsap.from(
+      heroText,
+      {
+        duration: 2,
+        y: 100,
+        opacity: 0,
+        ease: Power4.easeOut,
+      },
+      "-=1"
+    );
   }, []);
 
   return (

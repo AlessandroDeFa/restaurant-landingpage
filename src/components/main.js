@@ -1,24 +1,33 @@
 import React, { useRef, useEffect } from "react";
 import location from "./assets/location.jpg";
 import { Link } from "react-router-dom";
-import gsap, { Power4, TweenMax } from "gsap";
+import gsap, { Power4 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Main = () => {
   let textMain = useRef(null);
+  let imgMain = useRef(null);
+  let trigger = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    const textMain = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#About",
-        start: "center bottom",
-      },
-    });
+    gsap.fromTo(
+      imgMain,
+      { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" },
+      {
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+        duration: 1.5,
+        ease: Power4.easeInOut,
+        scrollTrigger: {
+          trigger: imgMain,
+        },
+      }
+    );
   }, []);
 
   return (
     <div
+      ref={(el) => (trigger = el)}
       id="About"
       className="min-h-screen bg-[#140e11] justify-evenly flex flex-col lg:py-8"
     >
@@ -28,7 +37,12 @@ const Main = () => {
       <div className="max-w-[90%] my-0 mx-auto w-screen h-[100%] flex">
         <div className="flex w-full lg:flex-col lg:items-center">
           <div className="w-1/2 md:before:top-[-1rem] md:before:left-[-1rem]  lg:w-full lg:max-w-[600px] relative h-full before:pointer-events-none before:w-full before:h-full before:absolute before:top-[-2rem] before:left-[-2rem] before:z-[-1] before:border-2 before:border-[#f8b984] z-10 ">
-            <img className="h-full w-full object-cover" src={location} alt="" />
+            <img
+              ref={(el) => (imgMain = el)}
+              className="h-full w-full object-cover"
+              src={location}
+              alt=""
+            />
           </div>
           <div className="w-1/2 lg:w-full h-full">
             <div className="pl-16 flex flex-col gap-12 h-full justify-evenly lg:pl-0 lg:pt-8">

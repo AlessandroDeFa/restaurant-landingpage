@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { Header, Footer } from "./index";
+import gsap, { Power4 } from "gsap";
 
 const Menu = () => {
+  let menuTitle = useRef(null);
+  let menu = useRef(null);
+
+  useEffect(() => {
+    gsap.from(menuTitle, { opacity: 0, duration: 1.5 });
+    gsap.from(menu, { opacity: 0, duration: 1.5, y: 20 }, "-=1.2");
+  });
+
   return (
     <>
       <div className="bg-[#140e11]">
@@ -9,10 +18,16 @@ const Menu = () => {
       </div>
       <div className="min-h-screen bg-[hsl(350,15%,10%)]">
         <div className="max-w-[95%] my-0 mx-auto w-screen flex flex-col items-center pt-8 pb-20">
-          <div className="mb-16 mt-8 before:w-[75%] relative before:bg-[#f8b984] before:absolute before:h-[2px] before:left-[50%] before:bottom-[-0.5rem] before:translate-x-[-50%]">
+          <div
+            ref={(el) => (menuTitle = el)}
+            className="mb-16 mt-8 before:w-[75%] relative before:bg-[#f8b984] before:absolute before:h-[2px] before:left-[50%] before:bottom-[-0.5rem] before:translate-x-[-50%]"
+          >
             <h1 className="text-[#f8b984] text-5xl">MENU</h1>
           </div>
-          <div className="w-full flex flex-col items-center lg:items-stretch mt-20 gap-32">
+          <div
+            ref={(el) => (menu = el)}
+            className="w-full flex flex-col items-center lg:items-stretch mt-20 gap-32"
+          >
             <div className="border-b-[1px] border-[#f8b984] before:w-full relative before:bg-[#f8b984] before:absolute before:h-[1px] before:bottom-[-0.5rem] before:left-0 pb-12 max-w-[1070px] w-full">
               <div className="text-white text-2xl text-center before:w-full relative before:bg-[#f8b984] before:absolute before:h-[1px] before:bottom-[-0.5rem] before:left-0">
                 <h2>Appetizers</h2>

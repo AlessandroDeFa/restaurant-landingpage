@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import background from "./components/assets/bg2.jpg";
-import gsap, { Power4, TweenMax } from "gsap";
+import gsap, { Power4 } from "gsap";
 // Sections
 import { Header, Hero, Main, Dish, Reservation, Footer } from "./index";
 
@@ -8,7 +8,7 @@ const Home = () => {
   let img = useRef(null);
 
   useEffect(() => {
-    TweenMax.from(img, {
+    gsap.from(img, {
       duration: 2,
       scale: 1.2,
       opacity: 0,
