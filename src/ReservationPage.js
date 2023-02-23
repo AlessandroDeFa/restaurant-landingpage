@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Header, Footer } from "./index";
-import gsap, { Power4 } from "gsap";
+import gsap from "gsap";
 
 const ReservationPage = () => {
   const onSubmit = (e) => {

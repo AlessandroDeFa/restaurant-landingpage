@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import gsap, { Power4 } from "gsap";
+import gsap from "gsap";
 import { Header, Footer } from "./index";
 import img from "./components/assets/fish.jpg";
 import pizza from "./components/assets/pizza.jpg";
