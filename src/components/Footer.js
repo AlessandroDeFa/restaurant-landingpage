@@ -42,9 +42,6 @@ const Footer = () => {
               <Link
                 to="/"
                 className="hover:text-[#d1d0d1] hover-transition-colors hover:duration-300"
-                onClick={() => {
-                  window.location.href = "/";
-                }}
               >
                 HOME
               </Link>
@@ -53,9 +50,6 @@ const Footer = () => {
               <Link
                 to="/menu"
                 className="hover:text-[#d1d0d1] hover-transition-colors hover:duration-300"
-                onClick={() => {
-                  window.location.href = "/menu";
-                }}
               >
                 MENU
               </Link>
@@ -64,9 +58,6 @@ const Footer = () => {
               <Link
                 to="/reservation"
                 className="hover:text-[#d1d0d1] hover-transition-colors hover:duration-300"
-                onClick={() => {
-                  window.location.href = "/reservation";
-                }}
               >
                 RESERVATION
               </Link>
@@ -75,9 +66,6 @@ const Footer = () => {
               <Link
                 to="/gallery"
                 className="hover:text-[#d1d0d1] hover-transition-colors hover:duration-300"
-                onClick={() => {
-                  window.location.href = "/gallery";
-                }}
               >
                 GALLERY
               </Link>
@@ -86,9 +74,6 @@ const Footer = () => {
               <Link
                 to="/contact"
                 className="hover:text-[#d1d0d1] hover-transition-colors hover:duration-300"
-                onClick={() => {
-                  window.location.href = "/contact";
-                }}
               >
                 CONTACT US
               </Link>
